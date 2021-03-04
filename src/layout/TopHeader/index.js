@@ -32,7 +32,7 @@ const index = () => {
             <Link to="/" className="nav__link">
               Schedule a Meeting
             </Link>
-            <Button className="btn" >Contact Us</Button>
+            <Button className="btn">Contact Us</Button>
           </div>
         </div>
       </nav>

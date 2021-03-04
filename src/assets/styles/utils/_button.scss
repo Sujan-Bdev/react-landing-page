@@ -7,11 +7,10 @@
   border: none;
   transition: all 0.3s ease;
   border: 1px solid transparent;
-  
+ 
 
-  &:hover{
-     color: $primary;
-     border: 1px solid $primary;
-    //  box-shadow: 0 0.5rem 1rem rgba($black, 0.3);
+  &:hover {
+    color: $primary;
+    border: 1px solid $primary;
   }
 }

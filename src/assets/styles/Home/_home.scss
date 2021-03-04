@@ -1,0 +1,42 @@
+.home-hero {
+  height: 95vh;
+  width: 100vw;
+  padding-top: 3rem;
+  background-color: $white;
+  &__text {
+    height: 100%;
+    max-width: 80%;
+    margin-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    &--main {
+      font-size: 4rem;
+      line-height: 5rem;
+      font-weight: 700;
+      color: $text;
+    }
+
+    &--sub {
+      color: $gray;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__picture {
+  }
+
+  .btn--hero {
+    border-radius: 10rem;
+    //   padding: 2rem 3rem;
+    //   text-align: center;
+  }
+
+  .ant-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem;
+  }
+}
