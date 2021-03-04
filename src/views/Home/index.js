@@ -1,12 +1,14 @@
-import React from 'react'
-import Hero from './Hero'
+import React from "react";
+import Hero from "./Hero";
+import Projects from "./Projects";
 
 const index = () => {
-    return (
-        <>
-            <Hero/>
-        </>
-    )
-}
+  return (
+    <>
+      <Hero />
+      <Projects />
+    </>
+  );
+};
 
-export default index
+export default index;

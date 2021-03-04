@@ -25,6 +25,7 @@
   }
 
   &__picture {
+    height: 95%;
   }
 
   .btn--hero {
@@ -38,5 +39,59 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 4rem;
+  }
+}
+
+.home-projects {
+  margin: 2rem 0;
+  padding: 2rem 0;
+
+  .card__container {
+    display: grid;
+    width: 100%;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: center;
+  }
+
+  &__card {
+    padding: 4rem 2rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border-radius: 2rem;
+
+    &:hover {
+      transform: translateY(-2rem);
+      box-shadow: 0 3rem 6rem rgba($black, 0.1);
+    }
+
+    .card__image-box {
+      padding: 2rem 0;
+      img {
+        border-radius: 1rem;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .card {
+    &__content {
+    }
+
+    &__title {
+      color: $text;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    &__text {
+      color: $gray;
+      font-size: 1.4rem;
+    }
+
+    &__link {
+      color: $primary;
+      cursor: pointer;
+    }
   }
 }
