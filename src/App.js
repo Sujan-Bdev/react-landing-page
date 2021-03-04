@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { Suspense } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Layout } from "antd";
 
-const  App = () => {
+import RouterApp from "router/index";
+import TopHeader from "layout/TopHeader";
+import Footer from "layout/Footer";
+
+const App = () => {
   return (
-    <div className="App">
-      <h2>Hello world</h2>
-      <p> Creating environment</p>
-    </div>
+    <Layout>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Router>
+          <TopHeader />
+          <RouterApp />
+          <Footer />
+        </Router>
+      </Suspense>
+    </Layout>
   );
-}
+};
 
 export default App;
