@@ -1,5 +1,4 @@
 import React from "react";
-import { Row, Col } from "antd";
 import ProjectCard from "components/ProjectCard";
 
 import project1 from "assets/img/projects/project-1.png";
@@ -23,16 +22,16 @@ const Projects = () => {
           />
 
           <ProjectCard
-            title="All You Need to Start"
-            subTitle="Add WooCommerce plugin to any WordPress site and set up a new store in minutes."
-            link="Ecommerce for Wordpress ›"
+            title="Customize and Extend"
+            subTitle="From subscriptions to gym classes to luxury cars, WooCommerce is fully customizable."
+            link="Browse Extensions ›"
             picture={project2}
           />
 
           <ProjectCard
-            title="All You Need to Start"
-            subTitle="Add WooCommerce plugin to any WordPress site and set up a new store in minutes."
-            link="Ecommerce for Wordpress ›"
+            title="Active Community"
+            subTitle="WooCommerce is one of the fastest-growing eCommerce communities. "
+            link="Check our Forums ›"
             picture={project3}
           />
         </div>
