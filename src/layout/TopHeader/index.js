@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Layout, Button } from "antd";
+import * as path from "router/path";
 
 const { Header } = Layout;
 
@@ -18,13 +19,19 @@ const index = () => {
           <div className="nav__menu">
             <ul className="nav__list">
               <li className="nav__item">
-                <Link className="nav__link">Home</Link>
+                <Link className="nav__link" to={path.HOME}>
+                  Home
+                </Link>
               </li>
               <li className="nav__item">
-                <Link className="nav__link">About Us</Link>
+                <Link className="nav__link" to={path.ABOUTUS}>
+                  About Us
+                </Link>
               </li>
               <li className="nav__item">
-                <Link className="nav__link">Projects</Link>
+                <Link className="nav__link" to={path.PROJECTS}>
+                  Projects
+                </Link>
               </li>
             </ul>
           </div>
@@ -32,7 +39,11 @@ const index = () => {
             <Link to="/" className="nav__link">
               Schedule a Meeting
             </Link>
-            <Button className="btn">Contact Us</Button>
+            <Link to={path.CONTACT}>
+              <Button className="btn" to={path.CONTACT}>
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </nav>

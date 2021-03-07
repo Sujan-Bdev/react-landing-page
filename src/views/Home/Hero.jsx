@@ -7,8 +7,8 @@ import heroImage from "assets/img/hero.png";
 const Hero = () => {
   return (
     <div className="home-hero">
-      <Row gutter={[16, 16]} justify = "center">
-        <Col xs = {24} md = {12} >
+      <Row gutter={[24,24]} justify="center">
+        <Col xs={24} md={12}>
           <div className="home-hero__text">
             <h2 className="home-hero__text--main">
               Building the Projects that empowers the next Global Progress
@@ -25,7 +25,7 @@ const Hero = () => {
             </Link>
           </div>
         </Col>
-        <Col span={12}>
+        <Col xs={24} md={12}>
           <div className="home-hero__picture">
             <img src={heroImage} alt="hero" />
           </div>

@@ -1,6 +1,7 @@
 .home-hero {
+
   height: 95vh;
-  width: 100vw;
+  width: 100%;
   padding-top: 3rem;
   background-color: $white;
   &__text {
@@ -43,6 +44,7 @@
 }
 
 .home-projects {
+
   margin: 2rem 0;
   padding: 2rem 0;
 
@@ -97,6 +99,7 @@
 }
 
 .home-about {
+  // width: 100vw;
   background-color: $primary-dark;
   margin:  8rem 0;
   position: relative;
@@ -163,6 +166,7 @@
 }
 
 .home-testimonials {
+
   background: linear-gradient(to right, $primary-light, $white);
 
   padding: 10rem 0;
@@ -209,7 +213,7 @@
       height: 5rem;
 
       top: -2rem;
-      left: 44rem;
+      right: -15rem;
     }
     .client5 {
       width: 6rem;
@@ -280,6 +284,7 @@
 
 .home-contact {
   // padding: 3rem 0;
+
   background-color: $primary;
   color: $white;
 
