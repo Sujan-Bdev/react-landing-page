@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Carousel } from "antd";
+import { Row, Col, Carousel } from "antd";
 import client1 from "assets/img/clients/client-1.png";
 import client2 from "assets/img/clients/client-2.png";
 import client3 from "assets/img/clients/client-3.png";
@@ -11,14 +11,6 @@ import { GrLinkNext } from "react-icons/gr";
 import { GrFormPreviousLink } from "react-icons/gr";
 
 const Testimonials = () => {
-  const contentStyle = {
-    height: "160px",
-    color: "#fff",
-    lineHeight: "160px",
-    textAlign: "center",
-    background: "#364d79",
-  };
-
   const [clientList] = useState([
     {
       id: 1,
@@ -57,38 +49,15 @@ const Testimonials = () => {
       class: "client6",
     },
   ]);
-  const [current, setCurrent] = useState(0);
-  const [testimonial, setTestimonial] = useState(clientList[current].response);
 
-  const length = clientList.length;
-
-  const nextClient = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-    setTestimonial(clientList[current].response);
-    // console.log(clientList[current]);
-  };
-
-  const prevClient = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-    setTestimonial(clientList[current].response);
-    // console.log(clientList[current]);
-  };
-
-  // console.log(current)
-
-  const [isClick, setClick] = useState(false);
-
-  const handleClick = (e, response) => {
-    setTestimonial(response);
-    // setClick(true);
-  };
   return (
     <div className="home-testimonials">
+      <div className="section__title">
+        <h2>Listen from our Clients</h2>
+      </div>
       <div className="container">
-        <div className="testimonial__box">
-          <div className="section__title">
-            <h2>Listen from our Clients</h2>
-          </div>
+        <Row justify = "center" gutter = {[16,16]} className = "client-row">
+         <Col span = {10}>
 
           <div className="client__list">
             {clientList.map((client, index) => (
@@ -97,12 +66,12 @@ const Testimonials = () => {
                 src={client.image}
                 className={client.class}
                 alt={client.class}
-                onClick={(e) => handleClick(e, client.response)}
               />
             ))}
           </div>
+
           <div className="carousel">
-            <Carousel>
+            <Carousel dots={false} arrows={true} autoplay>
               {clientList.map((client, index) => (
                 <div className="message">
                   <p className="message__text">{client.response}</p>
@@ -110,31 +79,8 @@ const Testimonials = () => {
               ))}
             </Carousel>
           </div>
-
-          {/* <div className="carousel-button">
-            <Button
-              shape="circle"
-              icon={<GrFormPreviousLink />}
-              type="ghost"
-              onClick={prevClient}
-            />
-            <Button
-              shape="circle"
-              icon={<GrLinkNext />}
-              type="ghost"
-              onClick={nextClient}
-            />
-          </div> */}
-
-          <h3 className="advertise">
-            We are the developers you want
-            <span className="advertise__text">
-              Our team of Happiness Engineers working remotely from 58 countries
-              providing customer support across multiple time zones.
-            </span>
-          </h3>
-          <img className="developers" src={developers} alt="developers" />
-        </div>
+         </Col>
+        </Row>
       </div>
     </div>
   );
