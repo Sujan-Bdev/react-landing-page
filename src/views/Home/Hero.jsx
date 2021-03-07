@@ -7,8 +7,8 @@ import heroImage from "assets/img/hero.png";
 const Hero = () => {
   return (
     <div className="home-hero">
-      <Row>
-        <Col span={12}>
+      <Row gutter={[16, 16]} justify = "center">
+        <Col xs = {24} md = {12} >
           <div className="home-hero__text">
             <h2 className="home-hero__text--main">
               Building the Projects that empowers the next Global Progress
@@ -19,7 +19,9 @@ const Hero = () => {
               sed quam nec fermentum.{" "}
             </p>
             <Link to="/">
-              <Button className="btn btn--hero" size = "large" >View Projects</Button>
+              <Button className="btn btn--hero" size="large">
+                View Projects
+              </Button>
             </Link>
           </div>
         </Col>

@@ -197,28 +197,32 @@
     }
   }
 
+  .carousel {
+    // width: ;
+    width: 40%;
+    border: 1px solid red;
+    background-color: $gray;
+  }
   .message {
     margin: 2rem 0;
-    width: 31%;
+    width: 100%;
     padding: 4rem 6rem;
     // border: 1px solid red;
-    background-color: $white;
+    background-color: $primary;
     border-radius: 2rem;
     text-align: center;
     margin-bottom: 6rem;
 
     &__text {
-      color: $gray;
+      color: $black;
       font-size: 1.8rem;
       font-weight: 500;
     }
   }
 
-  .carousel-button{
+  .carousel-button {
     margin-top: -4rem;
     margin-left: 8rem;
-
-    
   }
 
   .advertise {
@@ -240,5 +244,33 @@
     // margin: 0 auto;
     margin-left: -30rem;
     margin-top: -15rem;
+  }
+}
+
+.home-contact {
+  padding: 3rem 0;
+  background-color: $primary;
+  color: $white;
+
+  .contact__text {
+    font-size: 1.6rem;
+    font-weight: 300;
+
+    span {
+      font-weight: 700;
+    }
+  }
+  
+
+  .btn--contact {
+    border: 1px solid $white;
+    border-radius: 2rem;
+    padding: 2rem 3rem;
+  }
+
+  .ant-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

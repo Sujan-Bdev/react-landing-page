@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "antd";
+import { Button, Carousel } from "antd";
 import client1 from "assets/img/clients/client-1.png";
 import client2 from "assets/img/clients/client-2.png";
 import client3 from "assets/img/clients/client-3.png";
@@ -11,7 +11,14 @@ import { GrLinkNext } from "react-icons/gr";
 import { GrFormPreviousLink } from "react-icons/gr";
 
 const Testimonials = () => {
-  
+  const contentStyle = {
+    height: "160px",
+    color: "#fff",
+    lineHeight: "160px",
+    textAlign: "center",
+    background: "#364d79",
+  };
+
   const [clientList] = useState([
     {
       id: 1,
@@ -59,7 +66,6 @@ const Testimonials = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
     setTestimonial(clientList[current].response);
     // console.log(clientList[current]);
-
   };
 
   const prevClient = () => {
@@ -67,7 +73,7 @@ const Testimonials = () => {
     setTestimonial(clientList[current].response);
     // console.log(clientList[current]);
   };
-  
+
   // console.log(current)
 
   const [isClick, setClick] = useState(false);
@@ -95,12 +101,17 @@ const Testimonials = () => {
               />
             ))}
           </div>
-
-          <div className="message">
-            <p className="message__text">{testimonial}</p>
+          <div className="carousel">
+            <Carousel>
+              {clientList.map((client, index) => (
+                <div className="message">
+                  <p className="message__text">{client.response}</p>
+                </div>
+              ))}
+            </Carousel>
           </div>
 
-          <div className="carousel-button">
+          {/* <div className="carousel-button">
             <Button
               shape="circle"
               icon={<GrFormPreviousLink />}
@@ -113,7 +124,7 @@ const Testimonials = () => {
               type="ghost"
               onClick={nextClient}
             />
-          </div>
+          </div> */}
 
           <h3 className="advertise">
             We are the developers you want
